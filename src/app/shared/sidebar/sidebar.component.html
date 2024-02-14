@@ -1,0 +1,24 @@
+<!-- Sidebar -->
+<section class="bg-dark text-white p-4" id="sidebar-wrapper">
+  <!-- heading -->
+  <div class="sidebar-heading my-2">
+    <h1>GifsApps</h1>
+    <hr />
+    <h4 class="text-secondary">Search History:</h4>
+    <hr class="hrHistory">
+  </div>
+  <!-- /#heading -->
+  <!-- list -->
+  <div class="list-group">
+    <a
+      *ngFor="let item of history"
+      href="#"
+      class="list-group-item list-group-item-action"
+      aria-current="true"
+    >
+      {{ item | titlecase }}
+    </a>
+  </div>
+  <!-- /#list -->
+</section>
+<!-- /#sidebar-wrapper -->

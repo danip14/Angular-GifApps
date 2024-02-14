@@ -1,0 +1,25 @@
+  <!-- Search Bar -->
+  <div class="row">
+    <div class="col">
+      <div class="justify-content-end">
+        <!-- Search Form -->
+        <form class="d-flex" (ngSubmit)="onSubmit()" role="search">
+          <!-- Search input -->
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search for GIF..."
+            aria-label="Search"
+            [(ngModel)]="search" name="search"
+          />
+          <!-- /Search input -->
+
+          <!-- Search button -->
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+          <!-- /Search button -->
+        </form>
+        <!-- / Search Form -->
+      </div>
+    </div>
+  </div>
+  <!-- /#search-bar -->

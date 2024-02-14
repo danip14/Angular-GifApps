@@ -1,0 +1,10 @@
+/* styles.css */
+#sidebar-wrapper {
+  width: 20rem;
+  /* Cambiar el ancho del sidebar a 20rem */
+  height: 150vh;
+}
+hr.hrHistory {
+  width: 11rem;
+  color: gray;
+}
