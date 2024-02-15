@@ -1,23 +1,91 @@
+<button
+  class="GifsAppsButton btn btn-dark rounded-4 d-md-none"
+  type="button"
+  data-bs-toggle="offcanvas"
+  data-bs-target="#staticBackdrop"
+  aria-controls="staticBackdrop"
+>
+  GifsApps
+</button>
+
+<div
+  class="offcanvas offcanvas-start bg-dark text-white"
+  data-bs-backdrop="static"
+  tabindex="-1"
+  id="staticBackdrop"
+  aria-labelledby="staticBackdropLabel"
+  bis_skin_checked="1"
+>
+  <div class="offcanvas-header" bis_skin_checked="1">
+    <button
+      type="button"
+      class="btn-close btn-close-white"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Sidebar -->
+    <section class="bg-dark text-white" id="sidebar-wrapper">
+      <!-- heading -->
+      <div class="row sidebar-heading">
+        <div class="col">
+          <h1>GifsApps</h1>
+          <hr />
+          <h4 class="text-secondary mt-4">Search History:</h4>
+          <hr class="hrHistory" />
+        </div>
+      </div>
+      <!-- /#heading -->
+      <!-- list -->
+      <div class="row">
+        <div class="col">
+          <div class="list-group">
+            <a
+              *ngFor="let item of history"
+              (click)="search(item)"
+              href="#"
+              class="list-group-item list-group-item-action"
+              aria-current="true"
+            >
+              {{ item | titlecase }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /#list -->
+    </section>
+    <!-- /#sidebar-wrapper -->
+  </div>
+</div>
+
 <!-- Sidebar -->
-<section class="bg-dark text-white p-4" id="sidebar-wrapper">
+<section class="bg-dark text-white p-4 d-none d-md-block" id="sidebar-wrapper">
   <!-- heading -->
-  <div class="sidebar-heading my-2">
-    <h1>GifsApps</h1>
-    <hr />
-    <h4 class="text-secondary">Search History:</h4>
-    <hr class="hrHistory">
+  <div class="row sidebar-heading my-2">
+    <div class="col">
+      <h1>GifsApps</h1>
+      <hr />
+      <h4 class="text-secondary mt-4">Search History:</h4>
+      <hr class="hrHistory" />
+    </div>
   </div>
   <!-- /#heading -->
   <!-- list -->
-  <div class="list-group">
-    <a
-      *ngFor="let item of history"
-      href="#"
-      class="list-group-item list-group-item-action"
-      aria-current="true"
-    >
-      {{ item | titlecase }}
-    </a>
+  <div class="row">
+    <div class="col">
+      <div class="list-group">
+        <a
+          *ngFor="let item of history"
+          (click)="search(item)"
+          href="#"
+          class="list-group-item list-group-item-action"
+          aria-current="true"
+        >
+          {{ item | titlecase }}
+        </a>
+      </div>
+    </div>
   </div>
   <!-- /#list -->
 </section>
